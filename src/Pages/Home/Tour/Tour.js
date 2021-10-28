@@ -1,9 +1,16 @@
-import React from 'react';
+import React, { useState } from 'react';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faShoppingCart } from '@fortawesome/free-solid-svg-icons';
 import './Tour.css'
+import useBook from '../../../hooks/useBook';
 
 const Tour = ({tour}) => {
-    console.log(tour)
-    const {place , cost , travel ,Inclusion , img ,duration} = tour
+    
+
+    const {addToCart , selectedTour} = useBook();
+    const element = <FontAwesomeIcon icon={faShoppingCart} />
+    const {place , cost , travel ,Inclusion , img ,duration} = tour;
+    console.log(selectedTour)
     return (
         <div>
             <div id="container">	
@@ -21,8 +28,8 @@ const Tour = ({tour}) => {
 	
 	<button className="btn">
 	 <span className="price">৳{cost}</span>
-   <span className="shopping-cart"><i className="fa fa-shopping-cart" aria-hidden="true"></i></span>
-   <span className="buy">Book now</span>
+   <span className="shopping-cart">{element}</span>
+   <span onClick={()=> addToCart(tour) } className="buy">Book now</span>
  </button>
 	
 </div>
