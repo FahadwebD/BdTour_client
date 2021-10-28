@@ -6,8 +6,14 @@ const useBook = () =>{
 
 
     function addToCart(tour) {
-       
+        const isHave = selectedTour.find(
+            (selected) => selected._id === tour._id
+          );
         
+          if(isHave){
+            alert("course has been selected!");
+          }
+          else{
           fetch("http://localhost:5000/books/add", {
             method: "post",
             headers: { "content-type": "application/json" },
@@ -21,6 +27,7 @@ const useBook = () =>{
                 
               }
             });
+        }
       
       }
 

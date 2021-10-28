@@ -3,13 +3,13 @@
 
 
 
-#container{
+#c{
 	box-shadow: 0 15px 30px 1px grey;
 	background: rgba(255, 255, 255, 0.90);
 	text-align: center;
 	border-radius: 5px;
 	overflow: hidden;
-	margin: 5em auto;
+	margin: 10px auto;
 	height: 350px;
 	width: 650px;
 }
@@ -27,7 +27,7 @@
 
 }
 
-#container .product-details h1{
+#c .product-details #heich{
 	font-family: 'Bebas Neue', cursive;
 	display: inline-block;
 	position: relative;
@@ -37,7 +37,7 @@
 	
 }
 
-#container .product-details h1:before{
+#c .product-details #heich:before{
 	position: absolute;
 	content: '';
 	right: 0%; 
@@ -68,20 +68,20 @@
 }
 
 
-#container .product-details > p {
+#c .product-details > p {
 font-family: 'EB Garamond', serif;
 	text-align: center;
 	font-size: 18px;
 	color: #7d7d7d;
 	
 }
-.control{
+.controls{
 	position: absolute;
 	bottom: 20%;
 	left: 22.8%;
 	
 }
-.btn {
+.btnn {
 
 	transform: translateY(0px);
 	transition: 0.3s linear;
@@ -98,10 +98,10 @@ font-family: 'EB Garamond', serif;
 	
 }
 
-.btn:hover{transform: translateY(-6px);
+.btnn:hover{transform: translateY(-6px);
 	background: #1a66ff;}
 
-.btn span {
+.btnn #h {
 	font-family: 'Farsan', cursive;
 	transition: transform 0.3s;
 	display: inline-block;
@@ -110,17 +110,17 @@ font-family: 'EB Garamond', serif;
 	margin:0;
 	
 }
-.btn .price, .shopping-cart{
+.btnn .price, .shopping-cart{
 	background: #333;
 	border: 0;
 	margin: 0;
 }
 
-.btn .price {
+.btnn .price {
 	transform: translateX(-10%); padding-right: 15px;
 }
 
-.btn .shopping-cart {
+.btnn .shopping-cart {
 	transform: translateX(-100%);
   position: absolute;
 	background: #333;
@@ -129,11 +129,11 @@ font-family: 'EB Garamond', serif;
   top: 0;
 }
 
-.btn .buy {z-index: 3; font-weight: bolder;}
+.btnn .buy {z-index: 3; font-weight: bolder;}
 
-.btn:hover .price {transform: translateX(-110%);}
+.btnn:hover .price {transform: translateX(-110%);}
 
-.btn:hover .shopping-cart {transform: translateX(0%);}
+.btnn:hover .shopping-cart {transform: translateX(0%);}
 
 
 
@@ -148,7 +148,7 @@ font-family: 'EB Garamond', serif;
 	display: inline-block;
 }
 
-#container img {width: 100%;height: 100%;}
+#c img {width: 100%;height: 100%;}
 
 .info {
     background: rgba(27, 26, 26, 0.9);

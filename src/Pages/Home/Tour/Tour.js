@@ -13,23 +13,23 @@ const Tour = ({tour}) => {
     console.log(selectedTour)
     return (
         <div>
-            <div id="container">	
+            <div id="c" >	
 	
 	<div className="product-details">
 		
-	<h1>{place}</h1>
+	<h1 id='heich'>{place}</h1>
 	
 		
 			<p className="information">{Inclusion}</p>
 
 		
 		
-  <div className="control">
+  <div className="controls">
 	
-	<button className="btn">
-	 <span className="price">৳{cost}</span>
-   <span className="shopping-cart">{element}</span>
-   <span onClick={()=> addToCart(tour) } className="buy">Book now</span>
+	<button className="btnn">
+	 <span id='h' className="price">৳{cost}</span>
+   <span id='h' className="shopping-cart">{element}</span>
+   <span  onClick={()=> addToCart(tour) } className="buy me-3" >Book now</span>
  </button>
 	
 </div>
