@@ -12,7 +12,7 @@ const Tour = ({tour}) => {
     const {place , cost , travel ,Inclusion , img ,duration} = tour;
     console.log(selectedTour)
     return (
-        <div>
+        <div className='container'>
             <div id="c" >	
 	
 	<div className="product-details">
@@ -29,7 +29,7 @@ const Tour = ({tour}) => {
 	<button className="btnn">
 	 <span id='h' className="price">৳{cost}</span>
    <span id='h' className="shopping-cart">{element}</span>
-   <span  onClick={()=> addToCart(tour) } className="buy me-3" >Book now</span>
+   <span  onClick={()=> addToCart(tour) } className="buy me-3" >Book</span>
  </button>
 	
 </div>
@@ -38,7 +38,7 @@ const Tour = ({tour}) => {
 	
 <div className="product-image">
 	
-	<img src={img} alt=""/>
+	<img src={img} className='img-fluid' alt=""/>
 	
 
 <div className="info">

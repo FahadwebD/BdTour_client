@@ -1,0 +1,8 @@
+#ban-img{
+    height:450px
+}
+@media (max-width: 880px) {
+    #ban-img{
+        height:250px
+    }
+}

@@ -6,6 +6,7 @@ import Home from './Pages/Home/Home/Home';
 import Footer from './Pages/Shared/Footer/Footer';
 import Header from './Pages/Shared/Header/Header';
 import { BrowserRouter , Switch , Route } from 'react-router-dom';
+import UserOrder from './Pages/User/UserOrder/UserOrder';
 
 function App() {
   return (
@@ -16,6 +17,10 @@ function App() {
         <Route exact path='/'>
 
         <Home></Home>
+        </Route>
+        <Route exact path='/myorder'>
+
+        <UserOrder></UserOrder>
         </Route>
       </Switch>
       <Footer></Footer>
