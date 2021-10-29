@@ -39,13 +39,13 @@ const Header = () => {
 
 <Dropdown>
   <Dropdown.Toggle variant="success" id="dropdown-basic">
-  <Link to='./sd' style={{textDecoration:'none' , color:'white'}}>
+  <Link to='/sd' style={{textDecoration:'none' , color:'white'}}>
         Admin
       </Link>
   </Dropdown.Toggle>
 
   <Dropdown.Menu>
-    <Dropdown.Item href="#/action-1"><Link style={{textDecoration:'none' }}>Manage Order</Link></Dropdown.Item>
+    <Dropdown.Item href="#/action-1"><Link to='/sdsd' style={{textDecoration:'none' }}>Manage Order</Link></Dropdown.Item>
     <Dropdown.Item href="#/action-2">Add New Tour Plan</Dropdown.Item>
     
   </Dropdown.Menu>
