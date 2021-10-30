@@ -37,6 +37,8 @@ const UserOrder = () => {
           }
         })
         
+  
+
         }
     return (
         <div>
@@ -51,8 +53,8 @@ const UserOrder = () => {
                     </ManageOrder>)
                 }
             </div>
-            <div> 
-                {booked.length?<Link to='/placeOrder'><button>Check Out </button></Link>:'Please Select a package sir'}
+            <div > 
+                {booked.length?<Link to='/placeOrder'><button >Check Out </button></Link>:'Please Select a package sir'}
              </div>
         </div>
     );

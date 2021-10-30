@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react';
+import { Row } from 'react-bootstrap';
 import SpecificOne from './SpecificOne';
 
 const ShowOrderP = ({oderss}) => {
@@ -19,8 +20,9 @@ const ShowOrderP = ({oderss}) => {
 
     return (
         <div>
-           <h1>{booked?.length}</h1>
-           <div>
+           <h1>Booked {booked?.length} Packge</h1>
+           <div className='container'>
+           <Row xs={1} md={2} className="g-4">
                {
                 booked?.map(d=> <SpecificOne data={d}>
 
@@ -28,6 +30,7 @@ const ShowOrderP = ({oderss}) => {
 
 
                }
+               </Row>
                </div>
         </div>
     );

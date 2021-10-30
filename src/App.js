@@ -13,6 +13,10 @@ import PlaceOrder from './Pages/User/PlaceOrder/PlaceOrder';
 import UsersOrders from './Pages/AdminDashboard/UsersOrders/UsersOrders';
 import ShowOrder from './Pages/User/ShowOrder/ShowOrder';
 import UserManagment from './Pages/User/UserManagement/UserManagment';
+import PrivateRoute from './PrivateRoute/PrivateRoute';
+import BeAMember from './Pages/BeAMember/BeAMember';
+
+import AddNewPackage from './Pages/AdminDashboard/AddNewPackage/AddNewPackage';
 
 function App() {
   return (
@@ -50,6 +54,13 @@ function App() {
         <Route exact path='/user/showOrder'>
           <ShowOrder></ShowOrder>
         </Route>
+        <Route exact path='/addNewTour'>
+          <AddNewPackage></AddNewPackage>
+        </Route>
+        <PrivateRoute>
+          <BeAMember exact path='/be'></BeAMember>
+        </PrivateRoute>
+        
       </Switch>
       <Footer></Footer>
       </BrowserRouter>

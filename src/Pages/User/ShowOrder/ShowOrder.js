@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import useAuth from '../../../hooks/useAuth';
 import useFilterOrder from '../../../hooks/useFilterOrder';
 import ShowOrderP from './ShowOrderP';
+import './ShowOrder.css'
 
 const ShowOrder = () => {
     const [orders , setOrders] = useState([])
@@ -41,26 +42,35 @@ const ShowOrder = () => {
   
     
    
-    console.log(finish)
+   
   
  
 
   
     
- 
+ console.log(user)
 
     return (
         <div>
-            <h2>Show ORder From User</h2>
-            <h2>{user.email}</h2>
-            <div>
+       {user.email?      <div className="container mt-5 d-flex justify-content-center">
+    <div className="card p-3">
+        <div className="d-flex align-items-center">
+            <div className="image"> <img src={user.photoURL} alt='' className="rounded" style={{width:"155"}}/> </div>
+            <div className="ml-3 w-100">
+                <h4 className="mb-0 mt-0">{user.displayName}</h4> <span></span>
+               
+            </div>
+        </div>
+    </div>
+</div>: <div className='d-flex align-items-center justify-content-center'><h1>You Don't Have Any Booked Package Sir</h1></div>}
+           
+            
+            
+<div>
                 {
                     <ShowOrderP oderss={ordering}></ShowOrderP>
                 }
             </div>
-            
-            
-            
             
         </div>
     );

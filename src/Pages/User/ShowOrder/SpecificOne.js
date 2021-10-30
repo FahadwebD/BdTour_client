@@ -1,10 +1,22 @@
 import React from 'react';
+import { Card, Col } from 'react-bootstrap';
 
 const SpecificOne = ({data}) => {
-    console.log(data)
+   const {place , img , Inclusion} = data
     return (
         <div>
-         <h1>{data.place}</h1>
+         
+         <Col>
+      <Card>
+        <Card.Img variant="top" src={img} />
+        <Card.Body>
+          <Card.Title>{place}</Card.Title>
+          <Card.Text>
+            {Inclusion}
+          </Card.Text>
+        </Card.Body>
+      </Card>
+    </Col>
         </div>
     );
 };
