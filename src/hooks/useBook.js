@@ -1,17 +1,22 @@
 import { useState } from "react";
+import useAuth from "./useAuth";
 
 
 const useBook = () =>{
     const [selectedTour, setSelectedTour] = useState([]);
+    const {user} = useAuth();
 
 
     function addToCart(tour) {
+      
         const isHave = selectedTour.find(
             (selected) => selected._id === tour._id
           );
         
           if(isHave){
+            isHave.provider = user?.displayName;
             alert("course has been selected!");
+            
           }
           else{
           

@@ -1,22 +1,28 @@
 import React from 'react';
 
-const ManageOrder = ({selected}) => {
-    console.log(selected)
 
-    const {place , cost , travel ,Inclusion , img ,duration} = selected
+const ManageOrder = (props) => {
+
+    
+   
+    
+
+
+
+    const {place , cost , travel ,Inclusion , img ,duration} =props.selected
     return (
        <div>
-           <div class="card mb-3" style={{maxWidth: "740px"}}>
-  <div class="row g-0">
-    <div class="col-md-4">
-      <img src={img} class="img-fluid rounded-start" style={{height:"100%"}} alt="..."/>
+           <div className="card mb-3" style={{maxWidth: "740px"}}>
+  <div className="row g-0">
+    <div className="col-md-4">
+      <img src={img} className="img-fluid rounded-start" style={{height:"100%"}} alt="..."/>
     </div>
-    <div class="col-md-8">
-      <div class="card-body">
-        <h5 class="card-title">{place}</h5>
-        <p class="card-text">{travel}</p>
-        <p class="card-text"><small class="text-muted">{cost}</small></p>
-        <button>Remove</button>
+    <div className="col-md-8">
+      <div className="card-body">
+        <h5 className="card-title">{place}</h5>
+        <p className="card-text">{travel}</p>
+        <p className="card-text"><small className="text-muted">{cost}</small></p>
+        <button onClick={()=>props.handleDeleteUser(props.selected._id)}>Remove</button>
         
       </div>
     </div>

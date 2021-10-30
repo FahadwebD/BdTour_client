@@ -1,41 +1,37 @@
 import React from 'react';
-import { Container, Dropdown, Nav, Navbar, NavDropdown } from 'react-bootstrap';
+import { Button, Container, Dropdown, Nav, Navbar, NavDropdown } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
+import useAuth from '../../../hooks/useAuth';
 
 const Header = () => {
+  const {user , logOut} = useAuth();
     return (
         <div>
             <Navbar collapseOnSelect expand="lg" bg="dark" variant="dark">
   <Container>
-  <Navbar.Brand href="#home">Bd Tour</Navbar.Brand>
+  <Navbar.Brand as={Link} to='/'>Bd Tour</Navbar.Brand>
   <Navbar.Toggle aria-controls="responsive-navbar-nav" />
   <Navbar.Collapse id="responsive-navbar-nav">
     <Nav className="me-auto">
-      <Nav.Link href="#features">Features</Nav.Link>
-      <Nav.Link href="#pricing">Pricing</Nav.Link>
-      {/* <NavDropdown title="Dropdown" id="collasible-nav-dropdown">
-        <NavDropdown.Item href="#action/3.1">Action</NavDropdown.Item>
-        <NavDropdown.Item href="#action/3.2">Another action</NavDropdown.Item>
-        <NavDropdown.Item href="#action/3.3">Something</NavDropdown.Item>
-        <NavDropdown.Divider />
-        <NavDropdown.Item href="#action/3.4">Separated link</NavDropdown.Item>
-      </NavDropdown> */}
+ 
     </Nav>
     <Nav>
     
+      {user?.email?
       <Dropdown>
-  <Dropdown.Toggle variant="success" id="dropdown-basic">
-  <Link to='./sd' style={{textDecoration:'none' , color:'white'}}>
-        User
-      </Link>
-  </Dropdown.Toggle>
-
-  <Dropdown.Menu>
-    <Dropdown.Item href="#/action-1"><Link to='/myorder' style={{textDecoration:'none' }}>My Order</Link></Dropdown.Item>
-    <Dropdown.Item href="#/action-2">LogOut</Dropdown.Item>
+      <Dropdown.Toggle variant="success" id="dropdown-basic">
+      <Link to='/userManagement' style={{textDecoration:'none' , color:'white'}}>
+            {user?.displayName}
+          </Link>
+      </Dropdown.Toggle>
     
-  </Dropdown.Menu>
-</Dropdown>
+      <Dropdown.Menu>
+        <Dropdown.Item ><Link to='/myorder' style={{textDecoration:'none' }}>My Order</Link></Dropdown.Item>
+        <Dropdown.Item><Button onClick={logOut}>Logout</Button></Dropdown.Item>
+      
+        
+      </Dropdown.Menu>
+    </Dropdown>:<Nav.Link as={Link} to="/login"><Button>Login</Button></Nav.Link>}
 
 <Dropdown>
   <Dropdown.Toggle variant="success" id="dropdown-basic">
@@ -45,11 +41,12 @@ const Header = () => {
   </Dropdown.Toggle>
 
   <Dropdown.Menu>
-    <Dropdown.Item href="#/action-1"><Link to='/sdsd' style={{textDecoration:'none' }}>Manage Order</Link></Dropdown.Item>
-    <Dropdown.Item href="#/action-2">Add New Tour Plan</Dropdown.Item>
+    <Dropdown.Item ><Link to='/admin/userOrder' style={{textDecoration:'none' }}>Manage Order</Link></Dropdown.Item>
+    <Dropdown.Item>Add New Tour Plan</Dropdown.Item>
     
   </Dropdown.Menu>
 </Dropdown>
+
     </Nav>
   </Navbar.Collapse>
   </Container>

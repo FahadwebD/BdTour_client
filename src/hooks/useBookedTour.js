@@ -5,6 +5,7 @@ const useBookedTour = () =>{
 
 
     const [booked , setBooked] = useState([])
+    const [trying , setTrying] = useState([])
 
     useEffect(()=>{
 
@@ -13,7 +14,28 @@ const useBookedTour = () =>{
         .then(data => setBooked(data))
     },[])
 
-    return [booked]
+
+
+
+    const deleteUser = id =>{
+        const url=`http://localhost:5000/books/${id}`
+      fetch(url, {
+        method:'DELETE'
+      })
+      .then(res => res.json())
+      .then(data=>{
+        if(data.deletedCount>0){
+          alert('deleted Success');
+       
+          const booking = booked.filter(book => book._id !== id)
+          
+         setTrying(booking)
+        }
+      })
+      
+      }
+
+    return [booked ,setBooked ,deleteUser , trying] 
 
 }
 

@@ -1,15 +1,21 @@
 import React, { useState } from 'react';
+import { useHistory } from "react-router-dom";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faShoppingCart } from '@fortawesome/free-solid-svg-icons';
 import './Tour.css'
 import useBook from '../../../hooks/useBook';
+import useAuth from '../../../hooks/useAuth';
 
 const Tour = ({tour}) => {
-    
+    const history = useHistory();
+    const {user} = useAuth();
 
     const {addToCart , selectedTour} = useBook();
     const element = <FontAwesomeIcon icon={faShoppingCart} />
     const {place , cost , travel ,Inclusion , img ,duration} = tour;
+
+  
+    
     console.log(selectedTour)
     return (
         <div className='container'>
@@ -26,10 +32,16 @@ const Tour = ({tour}) => {
 		
   <div className="controls">
 	
-	<button className="btnn">
+	<button className="btnn" onClick={()=> {
+                  if (user?.email) {
+                    addToCart(tour);
+                  } else {
+                    history.push("/login");
+                  }
+                } } >
 	 <span id='h' className="price">৳{cost}</span>
    <span id='h' className="shopping-cart">{element}</span>
-   <span  onClick={()=> addToCart(tour) } className="buy me-3" >Book</span>
+   <span  className="buy me-3" >Book</span>
  </button>
 	
 </div>

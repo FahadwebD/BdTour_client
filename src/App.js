@@ -7,10 +7,17 @@ import Footer from './Pages/Shared/Footer/Footer';
 import Header from './Pages/Shared/Header/Header';
 import { BrowserRouter , Switch , Route } from 'react-router-dom';
 import UserOrder from './Pages/User/UserOrder/UserOrder';
+import AuthProvider from './context/AuthProvider';
+import Login from './Pages/Login/Login/Login';
+import PlaceOrder from './Pages/User/PlaceOrder/PlaceOrder';
+import UsersOrders from './Pages/AdminDashboard/UsersOrders/UsersOrders';
+import ShowOrder from './Pages/User/ShowOrder/ShowOrder';
+import UserManagment from './Pages/User/UserManagement/UserManagment';
 
 function App() {
   return (
     <div className="App">
+      <AuthProvider>
       <BrowserRouter>
       <Header/>
       <Switch>
@@ -18,13 +25,35 @@ function App() {
 
         <Home></Home>
         </Route>
+        <Route exact path='/home'>
+
+<Home></Home>
+</Route>
+          <Route exact path='/userManagement'>
+            <UserManagment></UserManagment>
+          </Route>
         <Route exact path='/myorder'>
 
         <UserOrder></UserOrder>
         </Route>
+        <Route exact path='/login'>
+          <Login></Login>
+        </Route>
+        <Route exact path='/placeOrder'>
+
+          <PlaceOrder></PlaceOrder>
+
+        </Route>
+        <Route exact path='/admin/userOrder'>
+          <UsersOrders></UsersOrders>
+        </Route>
+        <Route exact path='/user/showOrder'>
+          <ShowOrder></ShowOrder>
+        </Route>
       </Switch>
       <Footer></Footer>
       </BrowserRouter>
+      </AuthProvider>
     </div>
   );
 }
