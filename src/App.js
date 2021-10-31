@@ -18,6 +18,7 @@ import BeAMember from './Pages/BeAMember/BeAMember';
 
 import AddNewPackage from './Pages/AdminDashboard/AddNewPackage/AddNewPackage';
 import PhotoGallery from './Pages/PhotoGallery/PhotoGallery';
+import PageNotFound from './Pages/PageNotfound/PageNotFound';
 
 function App() {
   return (
@@ -27,29 +28,24 @@ function App() {
       <Header/>
       <Switch>
         <Route exact path='/'>
-
         <Home></Home>
         </Route>
         <Route exact path='/home'>
-
-<Home></Home>
-</Route>
+        <Home></Home>
+        </Route>
           <Route exact path='/userManagement'>
             <UserManagment></UserManagment>
           </Route>
         <Route exact path='/myorder'>
-
         <UserOrder></UserOrder>
         </Route>
         <Route exact path='/login'>
           <Login></Login>
         </Route>
         <Route exact path='/placeOrder'>
-
           <PlaceOrder></PlaceOrder>
-
-        </Route>
-        <PrivateRoute exact path='/admin/userOrder'>
+          </Route>
+         <PrivateRoute exact path='/admin/userOrder'>
           <UsersOrders></UsersOrders>
         </PrivateRoute>
         <Route exact path='/user/showOrder'>
@@ -64,7 +60,9 @@ function App() {
         <PrivateRoute>
           <BeAMember exact path='/be/a/member'></BeAMember>
         </PrivateRoute>
-        
+        <Route exact path='*'>
+        <PageNotFound/>
+       </Route>
       </Switch>
       <Footer></Footer>
       </BrowserRouter>
@@ -76,6 +74,3 @@ function App() {
 export default App;
 
 
-{/* <Header/>
-    
-    <Footer></Footer> */}
