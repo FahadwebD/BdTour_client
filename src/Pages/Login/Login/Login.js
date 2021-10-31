@@ -1,6 +1,7 @@
 import React from 'react';
 import { Button} from 'react-bootstrap';
 import useAuth from '../../../hooks/useAuth';
+import './Login.css'
 import { Link , useLocation , useHistory} from 'react-router-dom';
 
 const Login = () => {
@@ -19,8 +20,11 @@ const Login = () => {
           })
       }
     return (
-        <div>
-            <Button onClick={handleGoogleSignin}>Google</Button>
+        <div style={{height:"275px"}}>
+            <h1>Log In</h1>
+           <div style={{marginTop:82}}>
+           <Button className='px-5 fadeIn fourth' style={{backgroundColor:'#58baed' , border:"none"}} onClick={handleGoogleSignin}>Google</Button>
+           </div>
         </div>
     );
 };

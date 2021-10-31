@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react';
+import { Button, Table } from 'react-bootstrap';
 
 
 const OrderTotal = (props) => {
@@ -9,19 +10,25 @@ const OrderTotal = (props) => {
  
    const{name , booked} = props.data
 
-// Array.prototype.push.apply(data.booked);
-// console.log(data.booked)
+
 
 
 
 
 
     return (
-        <div>
-            <h1>Provider:{name} total booked for {booked.length} booked place{booked.map(c =>
-                 <li>{c.place}</li>)}</h1>
-            <button onClick={()=>props.handleOrderDelete(props.data._id)} >remove</button>
-            
+        <div >
+
+  <tbody  >
+    <tr   >
+      
+      <td style={{paddingLeft:10 , marginLeft:10}} ><p className='p-3 me-3'>{name}</p></td>
+      <td style={{paddingLeft:10 , marginLeft:10}} className='pe-2'><p  className='p-3 me-3'>{booked.map(c => <li style={{listStyle:'none'}}>{c.place}</li>)}</p></td>
+      <td style={{paddingLeft:10 , marginLeft:10}} className='pe-2'><p  className='p-3 me-3'><Button onClick={()=>props.handleOrderDelete(props.data._id)} >Delete</Button> <Button>Order Confirmed</Button></p></td>
+    
+    </tr>
+  </tbody>
+
         </div>
     );
 };

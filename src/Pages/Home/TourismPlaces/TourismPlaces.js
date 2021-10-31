@@ -7,8 +7,11 @@ const TourismPlaces = () => {
     const [ tours] = useTours([]);
    
     return (
-        <div >
-            <h2>Tour</h2>
+        <div   style={{marginTop:50 , marginBottom:50}}>
+           <div style={{marginBottom:10}}>
+           <h2 className='mt-3'>Packeges</h2>
+          
+           </div>
             <div className='boxGrid'>
                 {
                     tours.map(tour => <Tour

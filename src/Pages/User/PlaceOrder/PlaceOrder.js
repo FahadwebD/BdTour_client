@@ -12,7 +12,7 @@ const PlaceOrder = () => {
    console.log(booked)
     useEffect(()=>{
 
-        fetch('http://localhost:5000/books')
+        fetch('https://glacial-retreat-38096.herokuapp.com/books')
         .then(res => res.json())
         .then(data => setBooked(data))
     },[])
@@ -22,7 +22,7 @@ const PlaceOrder = () => {
         const email = user?.email
 
         const newUser = {name , email , booked};
-        fetch('http://localhost:5000/orders' , {
+        fetch('https://glacial-retreat-38096.herokuapp.com/orders' , {
             method:'POST',
             headers:{
                 'content-type': 'application/json'

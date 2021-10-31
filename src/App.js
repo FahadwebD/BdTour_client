@@ -17,6 +17,7 @@ import PrivateRoute from './PrivateRoute/PrivateRoute';
 import BeAMember from './Pages/BeAMember/BeAMember';
 
 import AddNewPackage from './Pages/AdminDashboard/AddNewPackage/AddNewPackage';
+import PhotoGallery from './Pages/PhotoGallery/PhotoGallery';
 
 function App() {
   return (
@@ -57,8 +58,11 @@ function App() {
         <Route exact path='/addNewTour'>
           <AddNewPackage></AddNewPackage>
         </Route>
+        <Route exact path='/photoGallery'>
+          <PhotoGallery></PhotoGallery>
+        </Route>
         <PrivateRoute>
-          <BeAMember exact path='/be'></BeAMember>
+          <BeAMember exact path='/be/a/member'></BeAMember>
         </PrivateRoute>
         
       </Switch>

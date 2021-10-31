@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react';
+import { Table } from 'react-bootstrap';
 import swal from 'sweetalert';
 import OrderTotal from './OrderTotal';
 
@@ -40,16 +41,29 @@ const UsersOrders = (props) => {
 
 
     return (
-        <div>
-            <h1>From admin</h1>
+      <div style={{height:600}}>
+        <h1>total Order</h1>
+      <div className='d-flex align-items-center justify-content-center'>
+      
+        <div className='mt-3'  >
+            
+            <Table  striped bordered hover>
+         
+          
             <div>
+          
                 {
                     orders.map(o=>  <OrderTotal 
                         key={o._id}
                         data={o}
                         handleOrderDelete={handleOrderDelete}></OrderTotal>)
                 }
+              
             </div>
+           
+            </Table>
+        </div>
+        </div>
         </div>
     );
 };

@@ -9,7 +9,7 @@ const useBookedTour = () =>{
 
     useEffect(()=>{
 
-        fetch('http://localhost:5000/books')
+        fetch('https://glacial-retreat-38096.herokuapp.com/books')
         .then(res => res.json())
         .then(data => setBooked(data))
     },[])
@@ -18,7 +18,7 @@ const useBookedTour = () =>{
 
 
     const deleteUser = id =>{
-        const url=`http://localhost:5000/books/${id}`
+        const url=`https://glacial-retreat-38096.herokuapp.com/books/${id}`
       fetch(url, {
         method:'DELETE'
       })

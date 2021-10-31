@@ -13,9 +13,11 @@ const Header = () => {
   <Navbar.Toggle aria-controls="responsive-navbar-nav" />
   <Navbar.Collapse id="responsive-navbar-nav">
     <Nav className="me-auto">
- 
+    <Nav.Link as={Link} to='/be/a/member'>About Us</Nav.Link>
+        <Nav.Link as={Link} to='/photoGallery'>Photo Gallery</Nav.Link>
     </Nav>
     <Nav>
+  
     
       {user?.email?
       <Dropdown>
@@ -35,9 +37,9 @@ const Header = () => {
 
 <Dropdown>
   <Dropdown.Toggle variant="warning" id="dropdown-basic">
-  <Link to='/sd' style={{textDecoration:'none' , color:'white'}}>
+ 
         Admin
-      </Link>
+     
   </Dropdown.Toggle>
 
   <Dropdown.Menu>
@@ -49,7 +51,7 @@ const Header = () => {
 
     </Nav>
   </Navbar.Collapse>
-  <NavLink to='/be'>Be A Member</NavLink>
+  
   </Container>
 </Navbar>
         </div>

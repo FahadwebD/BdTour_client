@@ -9,7 +9,7 @@ const AddNewPackage = () => {
   const onSubmit = data => {
     console.log(data)
     
-    fetch('http://localhost:5000/tours/add' , {
+    fetch('https://glacial-retreat-38096.herokuapp.com/tours/add' , {
         method:'POST',
         headers:{
             'content-type': 'application/json'

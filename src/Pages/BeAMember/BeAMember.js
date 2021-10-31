@@ -1,9 +1,10 @@
 import React from 'react';
+import ExtraPage from '../ExtraPage/ExtraPage';
 
 const BeAMember = () => {
     return (
         <div>
-            <h1>From Membership</h1>
+            <ExtraPage></ExtraPage>
         </div>
     );
 };

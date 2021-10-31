@@ -54,7 +54,7 @@ const UserOrder = () => {
                 }
             </div>
             <div > 
-                {booked.length?<Link to='/placeOrder'><button >Check Out </button></Link>:'Please Select a package sir'}
+                {booked.length?<Link to='/placeOrder'><button >Check Out </button></Link>:<Link to='/user/showOrder'><button> confirmed order </button></Link>}
              </div>
         </div>
     );
