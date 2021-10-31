@@ -9,7 +9,7 @@ const PlaceOrder = () => {
     const [booked , setBooked] = useState([])
     
   
-   console.log(booked)
+  
     useEffect(()=>{
 
         fetch('https://glacial-retreat-38096.herokuapp.com/books')
@@ -40,6 +40,9 @@ const PlaceOrder = () => {
        console.log(newUser)
         e.preventDefault();
     }
+    const total = booked.length
+    console.log(total)
+    console.log(<input type="number" defaultValue={total} />)
     return (
         <div>
             <h1>Confirm Order</h1>
@@ -49,8 +52,7 @@ const PlaceOrder = () => {
                 <br /> <br />
                 <input type="email" defaultValue={user?.email}/>
                 <br /> <br />
-                <input type="text" defaultValue={`${booked.length} Package Booked` } />
-                <br /> <br />
+                <p> U Booked For {total} Package</p>
                 <input type="submit" value="Confirem Booking" />
             </form>
             

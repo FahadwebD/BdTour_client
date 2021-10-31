@@ -44,17 +44,17 @@ const Footer = () => {
  
  <div className='flexing'>
  
- <p>{map}21 Revolution Street Delhi, India</p>
+ <p>{map}Bagbari , Norshingtila , Sylhet</p>
  </div>
  
  <div>
  
- <p>{telephone}+1 555 123456</p>
+ <p>{telephone}01746360969</p>
  </div>
  
  <div>
  
- <p>{envelope}<a href="mailto:support@company.com">contact@webdevtrick.com</a></p>
+ <p>{envelope}<a href="mailto:fahadchowdhury66779@gmail.com">fahadchowdhury66779@gmail.com</a></p>
  </div>
  
  </div>
@@ -63,7 +63,7 @@ const Footer = () => {
  
  <p className="footer-company-about">
  <span>About the company</span>
- Web Dev Trick is a blog for web designers, graphic designers, web developers &amp; SEO Learner.
+ BD tour Provide You the Best Tour package All over the bangladesh
  </p>
  
  <div className="footer-icons">

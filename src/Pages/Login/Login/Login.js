@@ -23,7 +23,7 @@ const Login = () => {
         <div style={{height:"275px"}}>
             <h1>Log In</h1>
            <div style={{marginTop:82}}>
-           <Button className='px-5 fadeIn fourth' style={{backgroundColor:'#58baed' , border:"none"}} onClick={handleGoogleSignin}>Google</Button>
+           <Button className='px-5 fadeIn first' style={{backgroundColor:'#58baed' , border:"none"}} onClick={handleGoogleSignin}>Google</Button>
            </div>
         </div>
     );
