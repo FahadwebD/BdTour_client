@@ -1,6 +1,6 @@
 # BD Tour Plan
 
-This project Hosted On Firebase [Create React App](https://bd-tour-83cdb.web.app/).
+This project Hosted On Firebase [Bd Tour](https://bd-tour-83cdb.web.app/).
 
 ## OverView
 
