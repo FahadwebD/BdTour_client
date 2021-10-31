@@ -42,12 +42,16 @@ const PlaceOrder = () => {
     }
     return (
         <div>
-            <h1>Add user</h1>
+            <h1>Confirm Order</h1>
 
             <form onSubmit={handleAddUser}>
                 <input type="text" defaultValue={user?.displayName} />
+                <br /> <br />
                 <input type="email" defaultValue={user?.email}/>
-                <input type="submit" value="Add" />
+                <br /> <br />
+                <input type="text" defaultValue={`${booked.length} Package Booked` } />
+                <br /> <br />
+                <input type="submit" value="Confirem Booking" />
             </form>
             
         </div>

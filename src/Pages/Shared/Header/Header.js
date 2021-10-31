@@ -28,8 +28,8 @@ const Header = () => {
       </Dropdown.Toggle>
     
       <Dropdown.Menu>
-        <Dropdown.Item ><Link to='/myorder' style={{textDecoration:'none' }}>Booked</Link></Dropdown.Item>
-        <Dropdown.Item ><Link to='/user/showOrder' style={{textDecoration:'none' }}>Confirmed Order</Link></Dropdown.Item>
+        <Dropdown.Item as={Link} to='/myorder' style={{textDecoration:'none' }}>Booked</Dropdown.Item>
+        <Dropdown.Item as={Link} to='/user/showOrder' style={{textDecoration:'none' }}>Confirmed Order</Dropdown.Item>
         <Dropdown.Item onClick={logOut}>Logout</Dropdown.Item>
       
         
@@ -44,8 +44,8 @@ const Header = () => {
   </Dropdown.Toggle>
 
   <Dropdown.Menu>
-    <Dropdown.Item ><Link to='/admin/userOrder' style={{textDecoration:'none' }}>Manage Order</Link></Dropdown.Item>
-    <Dropdown.Item><Link to='/addNewTour' style={{textDecoration:'none' }}>Add New TourPackage</Link></Dropdown.Item>
+    <Dropdown.Item as={Link} to='/admin/userOrder' style={{textDecoration:'none' }} >Manage Order</Dropdown.Item>
+    <Dropdown.Item as={Link} to='/addNewTour' style={{textDecoration:'none' }}>Add New TourPackage</Dropdown.Item>
     
   </Dropdown.Menu>
 </Dropdown>

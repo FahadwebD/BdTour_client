@@ -15,7 +15,7 @@ const useBook = () =>{
         
           if(isHave){
             isHave.provider = user?.displayName;
-            alert("course has been selected!");
+            alert("Package Already selected!");
             
           }
           else{
@@ -29,6 +29,7 @@ const useBook = () =>{
             .then((data) => {
               if (data.insertedId) {
                  const newSelection = [...selectedTour, tour];
+                 alert("Package  selected!");
                   setSelectedTour(newSelection);
                 
               }

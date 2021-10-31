@@ -49,9 +49,9 @@ function App() {
           <PlaceOrder></PlaceOrder>
 
         </Route>
-        <Route exact path='/admin/userOrder'>
+        <PrivateRoute exact path='/admin/userOrder'>
           <UsersOrders></UsersOrders>
-        </Route>
+        </PrivateRoute>
         <Route exact path='/user/showOrder'>
           <ShowOrder></ShowOrder>
         </Route>
