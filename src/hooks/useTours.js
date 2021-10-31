@@ -7,7 +7,7 @@ const useTours=()=>{
 
     useEffect(()=>{
 
-        fetch('http://localhost:5000/tours')
+        fetch('https://glacial-retreat-38096.herokuapp.com/tours')
         .then(res => res.json())
         .then(data => setTours(data))
     },[])

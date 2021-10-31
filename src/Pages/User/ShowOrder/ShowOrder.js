@@ -13,7 +13,7 @@ const ShowOrder = () => {
    
     useEffect(()=>{
 
-        fetch('http://localhost:5000/orders')
+        fetch('https://glacial-retreat-38096.herokuapp.com/orders')
         .then(res => res.json())
         .then(data => setOrders(data))
     },[])

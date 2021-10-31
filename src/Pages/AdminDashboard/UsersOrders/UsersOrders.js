@@ -8,14 +8,14 @@ const UsersOrders = (props) => {
 
     useEffect(()=>{
 
-        fetch('http://localhost:5000/orders')
+        fetch('https://glacial-retreat-38096.herokuapp.com/orders')
         .then(res => res.json())
         .then(data => setOrders(data))
     },[])
 
    const handleOrderDelete = (id) =>{
      console.log(id)
-     const url=`http://localhost:5000/orders/${id}`
+     const url=`https://glacial-retreat-38096.herokuapp.com/orders/${id}`
      fetch(url, {
        method:'DELETE'
      })
