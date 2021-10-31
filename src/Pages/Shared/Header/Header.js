@@ -22,13 +22,14 @@ const Header = () => {
       {user?.email?
       <Dropdown>
       <Dropdown.Toggle variant="light" id="dropdown-basic">
-      <Link to='/userManagement' style={{textDecoration:'none' , color:'dark'}}>
+      
             {user?.displayName}
-          </Link>
+         
       </Dropdown.Toggle>
     
       <Dropdown.Menu>
-        <Dropdown.Item ><Link to='/myorder' style={{textDecoration:'none' }}>My Order</Link></Dropdown.Item>
+        <Dropdown.Item ><Link to='/myorder' style={{textDecoration:'none' }}>Booked</Link></Dropdown.Item>
+        <Dropdown.Item ><Link to='/user/showOrder' style={{textDecoration:'none' }}>Confirmed Order</Link></Dropdown.Item>
         <Dropdown.Item onClick={logOut}>Logout</Dropdown.Item>
       
         

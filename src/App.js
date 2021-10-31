@@ -55,12 +55,12 @@ function App() {
         <Route exact path='/user/showOrder'>
           <ShowOrder></ShowOrder>
         </Route>
-        <Route exact path='/addNewTour'>
+        <PrivateRoute exact path='/addNewTour'>
           <AddNewPackage></AddNewPackage>
-        </Route>
-        <Route exact path='/photoGallery'>
+        </PrivateRoute>
+        <PrivateRoute exact path='/photoGallery'>
           <PhotoGallery></PhotoGallery>
-        </Route>
+        </PrivateRoute>
         <PrivateRoute>
           <BeAMember exact path='/be/a/member'></BeAMember>
         </PrivateRoute>
