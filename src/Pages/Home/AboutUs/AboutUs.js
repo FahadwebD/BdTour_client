@@ -25,7 +25,7 @@ const AboutUs = () => {
 
             <span className="glyphicon glyphicon-lock"></span>
             <h4>City Sightseeing</h4>
-            <p>Lorem ipsum dolor sit amet..</p>
+            
           </div>
           </div>
           <br />
@@ -35,14 +35,14 @@ const AboutUs = () => {
 
             <span className="glyphicon glyphicon-leaf"></span>
             <h4>Special Interest Tour</h4>
-            <p>Lorem ipsum dolor sit amet..</p>
+            
           </div>
           <br />
           <div className="col-sm-4">
               <img style={{height:70 , width:70}} src="https://5.imimg.com/data5/XA/CA/WS/SELLER-34921560/hotel-icon-png-500x500.png" alt="" />
             <span className="glyphicon glyphicon-certificate"></span>
             <h4>Hotel Reservation</h4>
-            <p>Lorem ipsum dolor sit amet..</p>
+            
           </div>
           <div className="col-sm-4">
             <img style={{height:70 , width:70}} src="https://icons.iconarchive.com/icons/atyourservice/service-categories/256/Video-icon.png" alt="" />

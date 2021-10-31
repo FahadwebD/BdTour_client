@@ -1,70 +1,32 @@
-# Getting Started with Create React App
+# BD Tour Plan
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-## Available Scripts
+## OverView
 
-In the project directory, you can run:
+This Is simple tour plannig website , many people around the world who can't relay on any agent .. Bd tour plan is perfect solution for them
 
-### `npm start`
+### User View
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+This Is simple tour plannig website , where user can booked a package accorading to his choice and also booked for multiple package , he  can go to booked page from there he can delete his selected package in case he or she accidently select package for order.. once he booked he can click on his name into navbar and he will find an option @Booked @Show All Order @Logout . if he want to confirmed his booked package he have to click confirmd order button. after clicking on it will route to process of confirming order page while he or she clicked on confirm booking it will send his booked place along with his name and email adress to database (admin)
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
 
-### `npm test`
+### Admin View
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+If you are looged in you are admin . you have to click on the admin drop down button to use admin functionalities . Admin Dropdown button just beside the user drop down button. If you Click on the Admin Drop Down you will see two option @Manage Order @ Add new Tour Package. Clicking on Manage order will route you to a page where you can see all the users name and booked places of the user as a admin you can delete it , if you delete it it will also delete from the @USer Confirmed Order of User drop down option. Next If you click on the @Add new tour package it will redirect you to the page where you will find a simple hook form by giving all info you can add new tour package and it will be visible on home page tours option directly from the database.
 
-### `npm run build`
+### Futuers
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+1.As A user when you confirm order it has to be delete the collection so that another user collection will be empty
+2.As A Admin if a user logged multiple time and select package and booked package again his order will be marge with his previous order.
+3.Will make it more atrractive design
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
-### `npm run eject`
+## Used Things
+ Node.js,Express.js,React.js,MongoDB
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+### Installation
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+React-route , FontAwesome , React Bootstrap , Sweet Alert , Firebase
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
