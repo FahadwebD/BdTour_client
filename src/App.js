@@ -1,4 +1,4 @@
-import logo from './logo.svg';
+
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './App.css';
 
@@ -14,10 +14,12 @@ import UsersOrders from './Pages/AdminDashboard/UsersOrders/UsersOrders';
 import ShowOrder from './Pages/User/ShowOrder/ShowOrder';
 import UserManagment from './Pages/User/UserManagement/UserManagment';
 import PrivateRoute from './PrivateRoute/PrivateRoute';
-import BeAMember from './Pages/BeAMember/BeAMember';
+
 
 import AddNewPackage from './Pages/AdminDashboard/AddNewPackage/AddNewPackage';
 import PhotoGallery from './Pages/PhotoGallery/PhotoGallery';
+
+import ExtraPage from './Pages/ExtraPage/ExtraPage';
 import PageNotFound from './Pages/PageNotfound/PageNotFound';
 
 function App() {
@@ -28,24 +30,29 @@ function App() {
       <Header/>
       <Switch>
         <Route exact path='/'>
+
         <Home></Home>
         </Route>
         <Route exact path='/home'>
-        <Home></Home>
-        </Route>
+
+<Home></Home>
+</Route>
           <Route exact path='/userManagement'>
             <UserManagment></UserManagment>
           </Route>
         <Route exact path='/myorder'>
+
         <UserOrder></UserOrder>
         </Route>
         <Route exact path='/login'>
           <Login></Login>
         </Route>
         <Route exact path='/placeOrder'>
+
           <PlaceOrder></PlaceOrder>
-          </Route>
-         <PrivateRoute exact path='/admin/userOrder'>
+
+        </Route>
+        <PrivateRoute exact path='/admin/userOrder'>
           <UsersOrders></UsersOrders>
         </PrivateRoute>
         <Route exact path='/user/showOrder'>
@@ -57,12 +64,15 @@ function App() {
         <PrivateRoute exact path='/photoGallery'>
           <PhotoGallery></PhotoGallery>
         </PrivateRoute>
-        <PrivateRoute>
+        {/* <PrivateRoute>
           <BeAMember exact path='/be/a/member'></BeAMember>
+        </PrivateRoute> */}
+        <PrivateRoute exact path='/extraPage'>
+          <ExtraPage></ExtraPage>
         </PrivateRoute>
         <Route exact path='*'>
-        <PageNotFound/>
-       </Route>
+          <PageNotFound></PageNotFound>
+        </Route>
       </Switch>
       <Footer></Footer>
       </BrowserRouter>
@@ -74,3 +84,6 @@ function App() {
 export default App;
 
 
+{/* <Header/>
+    
+    <Footer></Footer> */}
